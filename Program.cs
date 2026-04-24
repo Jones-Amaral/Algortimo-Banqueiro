@@ -169,13 +169,12 @@ class Program
 
     static void Main(string[] args)
     {
-        int req1 = int.Parse(args[0]);
-        int req2 = int.Parse(args[1]);
-        int req3 = int.Parse(args[2]);
-
+        int req1 = int.Parse(args[0]); // Recurso passado no console pelo comando de execução
+        int req2 = int.Parse(args[1]); // Recurso passado no console pelo comando de execução
+        int req3 = int.Parse(args[2]); // Recurso passado no console pelo comando de execução
         Banqueiro banco = new Banqueiro(req1, req2, req3);
 
-        for (int i = 0; i < 5; i++)
+        for (int i = 0; i < 5; i++) // criação e inicialização das threads.
         {
             int id = i;
             Thread t = new Thread(() => banco.RotinaCliente(id));
