@@ -34,7 +34,7 @@
     // o que o processo precisa no momento
     // é: máximo - alocação
     // ele mostra quanto um processo ainda precisa para que seja executado
-    public void Need()
+    public void Need() // função que atualiza automaticamente a matriz need.
     {
         for (int i = 0; i < maximum.GetLength(0); i++)
         {
@@ -69,7 +69,7 @@
                 return 0;
             else
             {
-                for (int i = 0; i < 3; i++)
+                for (int i = 0; i < 3; i++) // devolução dos recursos.
                 {
                     available[i] += request[i];
                     allocation[customer_num, i] -= request[i];
@@ -137,20 +137,50 @@
         }
         return true; // o sistema é seguro
     }
+    public void RotinaCliente(int customer_id) //solicitação de recurso e liberação
+    {
+        Random aleatorio = new Random();
+        while (true)
+        {
+            int[] pedido = new int[NUMBER_OF_RESOURCES]; // array para o need
+            lock (lockBanqueiro)
+            {
+                for (int i = 0; i < pedido.Length; i++)
+                    pedido[i] = aleatorio.Next(0, need[customer_id, i] + 1); // preenche o pedido com o need
+            }
+            System.Console.WriteLine($"Cliente {customer_id} está solicitando recursos.");
+            if (request_resources(customer_id, pedido) == 0) // faz o request
+            {
+                System.Console.WriteLine($"Cliente {customer_id} obteve o recurso!");
+                Thread.Sleep(aleatorio.Next(500, 1500)); // espera algum tempo
+                release_resources(customer_id, pedido); // libera o recurso
+                System.Console.WriteLine($"Cliente {customer_id} liberou o recurso!");
+            }
+            else
+            {
+                System.Console.WriteLine($"Cliente {customer_id} não pode adquirir os recursos");
+            }
+            Thread.Sleep(aleatorio.Next(500, 1500)); // espera algum tempo
+        }
+    }
 }
 class Program
 {
-    static void Main()
+
+    static void Main(string[] args)
     {
-        int req1, req2, req3;
-        System.Console.WriteLine("Digite quanto do recurso 1 terá disponível");
-        req1 = int.Parse(Console.ReadLine());
-        System.Console.WriteLine("Digite quanto do recurso 2 terá disponível");
-        req2 = int.Parse(Console.ReadLine());
-        System.Console.WriteLine("Digite quanto do recurso 3 terá disponível");
-        req3 = int.Parse(Console.ReadLine());
+        int req1 = int.Parse(args[0]);
+        int req2 = int.Parse(args[1]);
+        int req3 = int.Parse(args[2]);
 
         Banqueiro banco = new Banqueiro(req1, req2, req3);
+
+        for (int i = 0; i < 5; i++)
+        {
+            int id = i;
+            Thread t = new Thread(() => banco.RotinaCliente(id));
+            t.Start();
+        }
 
     }
 }

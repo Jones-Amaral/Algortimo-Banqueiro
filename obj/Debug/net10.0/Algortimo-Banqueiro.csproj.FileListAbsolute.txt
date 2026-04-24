@@ -1,0 +1,15 @@
+C:\Users\user\Desktop\Faculdade\3 semestre\SO\Algortimo-Banqueiro\bin\Debug\net10.0\Algortimo-Banqueiro.exe
+C:\Users\user\Desktop\Faculdade\3 semestre\SO\Algortimo-Banqueiro\bin\Debug\net10.0\Algortimo-Banqueiro.deps.json
+C:\Users\user\Desktop\Faculdade\3 semestre\SO\Algortimo-Banqueiro\bin\Debug\net10.0\Algortimo-Banqueiro.runtimeconfig.json
+C:\Users\user\Desktop\Faculdade\3 semestre\SO\Algortimo-Banqueiro\bin\Debug\net10.0\Algortimo-Banqueiro.dll
+C:\Users\user\Desktop\Faculdade\3 semestre\SO\Algortimo-Banqueiro\bin\Debug\net10.0\Algortimo-Banqueiro.pdb
+C:\Users\user\Desktop\Faculdade\3 semestre\SO\Algortimo-Banqueiro\obj\Debug\net10.0\Algortimo-Banqueiro.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\user\Desktop\Faculdade\3 semestre\SO\Algortimo-Banqueiro\obj\Debug\net10.0\Algortimo-Banqueiro.AssemblyInfoInputs.cache
+C:\Users\user\Desktop\Faculdade\3 semestre\SO\Algortimo-Banqueiro\obj\Debug\net10.0\Algortimo-Banqueiro.AssemblyInfo.cs
+C:\Users\user\Desktop\Faculdade\3 semestre\SO\Algortimo-Banqueiro\obj\Debug\net10.0\Algortimo-Banqueiro.csproj.CoreCompileInputs.cache
+C:\Users\user\Desktop\Faculdade\3 semestre\SO\Algortimo-Banqueiro\obj\Debug\net10.0\Algortimo-Banqueiro.sourcelink.json
+C:\Users\user\Desktop\Faculdade\3 semestre\SO\Algortimo-Banqueiro\obj\Debug\net10.0\Algortimo-Banqueiro.dll
+C:\Users\user\Desktop\Faculdade\3 semestre\SO\Algortimo-Banqueiro\obj\Debug\net10.0\refint\Algortimo-Banqueiro.dll
+C:\Users\user\Desktop\Faculdade\3 semestre\SO\Algortimo-Banqueiro\obj\Debug\net10.0\Algortimo-Banqueiro.pdb
+C:\Users\user\Desktop\Faculdade\3 semestre\SO\Algortimo-Banqueiro\obj\Debug\net10.0\Algortimo-Banqueiro.genruntimeconfig.cache
+C:\Users\user\Desktop\Faculdade\3 semestre\SO\Algortimo-Banqueiro\obj\Debug\net10.0\ref\Algortimo-Banqueiro.dll
